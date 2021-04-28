@@ -1,9 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Image, Button, Text, Box, Icon } from "@quarkly/widgets";
+import { Theme, Link, Image, Button, Text, Input, Box, Icon } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Override, StackItem, Stack, Section, SocialMedia } from "@quarkly/components";
+import { Override, StackItem, Stack, Section, Formspree, SocialMedia } from "@quarkly/components";
 import * as Components from "components";
 import { MdMenu } from "react-icons/md";
 import { DiBootstrap, DiBingSmall, DiCssTricks, DiEnvato, DiGithubBadge } from "react-icons/di";
@@ -167,6 +167,57 @@ export default (() => {
 					</Text>
 				</StackItem>
 				<StackItem width="50%" md-width="100%" />
+			</Stack>
+		</Section>
+		<Section background="--color-light" color="--dark" padding="64px 0">
+			<Stack>
+				<StackItem width="50%" lg-width="100%">
+					<Override slot="StackItemContent" flex-direction="column" />
+					<Text
+						font="--base"
+						color="--grey"
+						letter-spacing="1px"
+						text-transform="uppercase"
+						margin="0"
+					>
+						Contact
+					</Text>
+					<Text font="--headline2" max-width="500px" margin="10px 0 0 0">
+						Email us, we would love to hear form you
+					</Text>
+				</StackItem>
+				<StackItem width="50%" lg-width="100%">
+					<Formspree>
+						<Stack gap="16px">
+							<StackItem width="50%">
+								<Override slot="StackItemContent" flex-direction="column" />
+								<Text font="--base" margin="0 0 4px 0">
+									Name
+								</Text>
+								<Input max-width="400px" width="100%" name="name" />
+							</StackItem>
+							<StackItem width="50%">
+								<Override slot="StackItemContent" flex-direction="column" />
+								<Text font="--base" margin="0 0 4px 0">
+									Email
+								</Text>
+								<Input max-width="400px" width="100%" type="email" name="email" />
+							</StackItem>
+							<StackItem width="100%">
+								<Override slot="StackItemContent" flex-direction="column" />
+								<Text font="--base" margin="0 0 4px 0">
+									Message
+								</Text>
+								<Input as="textarea" rows="4" width="100%" name="message" />
+							</StackItem>
+							<StackItem width="100%">
+								<Button>
+									Send
+								</Button>
+							</StackItem>
+						</Stack>
+					</Formspree>
+				</StackItem>
 			</Stack>
 		</Section>
 		<Section
