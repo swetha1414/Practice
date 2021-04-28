@@ -221,6 +221,36 @@ export default (() => {
 			</Stack>
 		</Section>
 		<Section
+			padding="60px 0"
+			sm-padding="40px 0"
+			min-height="600px"
+			sm-min-height="auto"
+			background="--color-light"
+			display="flex"
+			flex-direction="column"
+		>
+			<Text
+				font="--base"
+				text-transform="uppercase"
+				letter-spacing="1px"
+				max-width="850px"
+				color="--grey"
+				margin="0px"
+			>
+				Eyebrow
+			</Text>
+			<Text
+				as="h1"
+				margin="8px 0px 32px"
+				font="--headline1"
+				md-font="--headline2"
+				color="--dark"
+				max-width="850px"
+			>
+				Hi! I'm a heading. Click here to add your own text and edit me. It’s a piece of cake.
+			</Text>
+		</Section>
+		<Section
 			padding="25px 0 75px 0"
 			sm-align-items="center"
 			sm-justify-content="center"
